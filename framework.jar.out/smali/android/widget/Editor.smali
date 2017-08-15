@@ -6992,6 +6992,19 @@
     .locals 8
 
     .prologue
+    
+    iget-object v0, p0, Landroid/widget/Editor;->mTextView:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_flyme_0
+
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/Editor;->startSelectionActionModeMz()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_flyme_0
+
     const/4 v7, 0x0
 
     const/4 v4, 0x0
@@ -7132,6 +7145,9 @@
     .locals 2
 
     .prologue
+    
+    invoke-static/range {p0 .. p0}, Landroid/widget/Editor$FlymeInjector;->removeSelectonActionModeRunnable(Landroid/widget/Editor;)V
+
     sget-boolean v0, Landroid/widget/Editor;->DEBUG:Z
 
     if-eqz v0, :cond_0

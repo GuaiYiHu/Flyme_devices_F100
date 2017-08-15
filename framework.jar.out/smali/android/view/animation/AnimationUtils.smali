@@ -507,7 +507,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_b
+    if-eqz v6, :cond_flyme_0
 
     .line 376
     new-instance v3, Lcom/mediatek/view/animation/DecelerateInterpolatorEx;
@@ -534,6 +534,9 @@
     goto/16 :goto_flyme_0
 
     :cond_b
+    
+    :cond_flyme_1
+    
     const-string v6, "pathInterpolator"
 
     invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

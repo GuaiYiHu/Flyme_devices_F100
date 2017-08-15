@@ -227,6 +227,18 @@
 
     if-eqz v1, :cond_2
 
+    invoke-static {}, Landroid/os/BuildExt;->isProductInternational()Z
+
+    move-result v1
+
+    if-nez v1, :cond_flyme_0
+
+    invoke-static {p0, v0}, Landroid/text/util/Linkify;->flymeGatherLinks(Landroid/text/Spannable;Ljava/util/ArrayList;)V
+
+    goto/16 :goto_flyme_0
+
+    :cond_flyme_0
+
     const-class v1, Lcom/mediatek/common/util/IWebProtocolNames;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -274,6 +286,7 @@
     .end local v3    # "webProtocolNames":[Ljava/lang/String;
     .end local v14    # "plugin":Lcom/mediatek/common/util/IWebProtocolNames;
     :cond_2
+    :goto_flyme_0
     :goto_2
     and-int/lit8 v1, p1, 0x2
 

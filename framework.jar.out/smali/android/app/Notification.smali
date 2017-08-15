@@ -847,6 +847,7 @@
 
     iput v1, p0, Landroid/app/Notification;->mClone:I
 
+    invoke-static/range {p0 .. p1}, Landroid/app/Notification$FlymeInjector;->readFromParcelFlyme(Landroid/app/Notification;Landroid/os/Parcel;)V
     return-void
 .end method
 
@@ -1563,6 +1564,8 @@
     iget v5, p0, Landroid/app/Notification;->mClone:I
 
     iput v5, p1, Landroid/app/Notification;->mClone:I
+
+    invoke-static/range {p0 .. p1}, Landroid/app/Notification$FlymeInjector;->cloneIntoFlyme(Landroid/app/Notification;Landroid/app/Notification;)V
 
     return-void
 .end method
@@ -2483,6 +2486,8 @@
     iget v0, p0, Landroid/app/Notification;->mClone:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static/range {p0 .. p2}, Landroid/app/Notification$FlymeInjector;->writeToParcelFlyme(Landroid/app/Notification;Landroid/os/Parcel;I)V
 
     return-void
 

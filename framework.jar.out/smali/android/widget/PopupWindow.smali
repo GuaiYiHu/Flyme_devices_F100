@@ -970,7 +970,7 @@
 .end method
 
 .method private findDropDownPosition(Landroid/view/View;Landroid/view/WindowManager$LayoutParams;III)Z
-    .locals 23
+    .locals 27
     .param p1, "anchor"    # Landroid/view/View;
     .param p2, "p"    # Landroid/view/WindowManager$LayoutParams;
     .param p3, "xoff"    # I
@@ -3019,6 +3019,11 @@
     .line 1421
     .end local v6    # "res":Landroid/content/res/Resources;
     :cond_1
+    
+    invoke-virtual {p0, v1}, Landroid/widget/PopupWindow;->computePopwindowPositionForMz(I)I
+
+    move-result v1
+
     const/4 v8, 0x1
 
     aget v8, v0, v8

@@ -106,6 +106,9 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
+
+    invoke-direct/range {p0 .. p0}, Landroid/widget/Toast$TN;->initFlymeExtraFields()V
+
     return-void
 .end method
 

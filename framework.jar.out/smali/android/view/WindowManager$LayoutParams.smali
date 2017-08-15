@@ -1499,6 +1499,8 @@
 
     iput v0, p0, Landroid/view/WindowManager$LayoutParams;->isHomekeyDispatched:I
 
+    invoke-static/range {p0 .. p1}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->readFromParcel(Landroid/view/WindowManager$LayoutParams;Landroid/os/Parcel;)V
+
     return-void
 
     :cond_0
@@ -2196,6 +2198,11 @@
     move-result v2
 
     iput v2, p0, Landroid/view/WindowManager$LayoutParams;->isHomekeyDispatched:I
+
+
+    invoke-static {p0, p1, v0}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->copyFrom(Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManager$LayoutParams;I)I
+
+    move-result v0
 
     return v0
 .end method
@@ -3174,6 +3181,8 @@
     iget v0, p0, Landroid/view/WindowManager$LayoutParams;->isHomekeyDispatched:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static/range {p0 .. p1}, Landroid/view/WindowManager$LayoutParams$FlymeInjector;->writeToParcel(Landroid/view/WindowManager$LayoutParams;Landroid/os/Parcel;)V
 
     return-void
 

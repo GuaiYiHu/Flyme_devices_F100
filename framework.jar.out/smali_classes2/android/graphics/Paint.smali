@@ -260,6 +260,9 @@
 
     invoke-direct {p0}, Landroid/graphics/Paint;->setAmigoTypeface()V
 
+
+    invoke-direct/range {p0 .. p0}, Landroid/graphics/Paint;->setFlymeTypeface()V
+
     return-void
 .end method
 
