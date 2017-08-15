@@ -11,6 +11,7 @@
         Landroid/content/pm/PackageParser$ProviderIntentInfo;,
         Landroid/content/pm/PackageParser$ServiceIntentInfo;,
         Landroid/content/pm/PackageParser$ActivityIntentInfo;,
+        Landroid/content/pm/PackageParser$FlymeInjector;,
         Landroid/content/pm/PackageParser$IntentInfo;,
         Landroid/content/pm/PackageParser$Instrumentation;,
         Landroid/content/pm/PackageParser$Provider;,
@@ -4387,6 +4388,10 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->uiOptions:I
 
+    move-object/from16 v0, v18
+
+    invoke-static {v14, v0}, Landroid/content/pm/PackageParser$FlymeInjector;->parseAccessArgsFromResource(Landroid/content/pm/PackageParser$Activity;Landroid/content/res/TypedArray;)V
+
     .line 3140
     const/16 v2, 0x1b
 
@@ -5354,13 +5359,11 @@
 
     goto/16 :goto_6
 
-    .line 3334
     :cond_20
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v16
 
-    .line 3337
     .local v16, "outerDepth":I
     :cond_21
     :goto_8
@@ -5666,12 +5669,10 @@
 
     if-nez v2, :cond_21
 
-    .line 3373
     const/4 v14, 0x0
 
     goto/16 :goto_1
 
-    .line 3377
     :cond_2a
     const-string v2, "PackageParser"
 
@@ -6327,6 +6328,12 @@
     move-object/from16 v0, v17
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->maxRecents:I
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, v25
+
+    invoke-static {v0, v1}, Landroid/content/pm/PackageParser$FlymeInjector;->copyAccessArgs(Landroid/content/pm/ActivityInfo;Landroid/content/pm/PackageParser$Activity;)V
 
     .line 3486
     new-instance v15, Landroid/content/pm/PackageParser$Activity;
@@ -21198,20 +21205,28 @@
     .param p1, "requiresSeparator"    # Z
 
     .prologue
-    .line 1228
+    invoke-static/range {p0 .. p0}, Landroid/content/pm/PackageParser$FlymeInjector;->validateName(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_flyme_0
+
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 1229
     .local v0, "N":I
     const/4 v3, 0x0
 
-    .line 1230
     .local v3, "hasSep":Z
     const/4 v2, 0x1
 
-    .line 1231
     .local v2, "front":Z
     const/4 v4, 0x0
 

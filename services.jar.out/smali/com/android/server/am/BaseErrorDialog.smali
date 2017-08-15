@@ -23,24 +23,20 @@
     .prologue
     const/high16 v3, 0x20000
 
-    .line 44
     const/4 v1, 0x7
 
     invoke-direct {p0, p1, v1}, Lamigo/app/AmigoAlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 39
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/am/BaseErrorDialog;->mConsuming:Z
 
-    .line 85
     new-instance v1, Lcom/android/server/am/BaseErrorDialog$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/am/BaseErrorDialog$1;-><init>(Lcom/android/server/am/BaseErrorDialog;)V
 
     iput-object v1, p0, Lcom/android/server/am/BaseErrorDialog;->mHandler:Landroid/os/Handler;
 
-    .line 47
     invoke-virtual {p0}, Lcom/android/server/am/BaseErrorDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -111,8 +107,7 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 71
-    const v1, 0x1020019
+    const v1, #android:id@button1#t
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/BaseErrorDialog;->findViewById(I)Landroid/view/View;
 
@@ -129,7 +124,7 @@
 
     .line 75
     :cond_0
-    const v1, 0x102001a
+    const v1, #android:id@button2#t
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/BaseErrorDialog;->findViewById(I)Landroid/view/View;
 
@@ -147,7 +142,7 @@
 
     .line 79
     :cond_1
-    const v1, 0x102001b
+    const v1, #android:id@button3#t
 
     invoke-virtual {p0, v1}, Lcom/android/server/am/BaseErrorDialog;->findViewById(I)Landroid/view/View;
 

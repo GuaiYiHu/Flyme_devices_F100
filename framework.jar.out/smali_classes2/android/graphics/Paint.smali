@@ -226,49 +226,40 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 442
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/graphics/Paint;->mIsAmigoFont:Z
 
-    .line 72
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/graphics/Paint;->mBidiFlags:I
 
-    .line 443
     invoke-static {}, Landroid/graphics/Paint;->native_init()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/graphics/Paint;->mNativePaint:J
 
-    .line 444
     or-int/lit16 v0, p1, 0x500
 
     invoke-virtual {p0, v0}, Landroid/graphics/Paint;->setFlags(I)V
 
-    .line 449
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/graphics/Paint;->mInvCompatScaling:F
 
     iput v0, p0, Landroid/graphics/Paint;->mCompatScaling:F
 
-    .line 450
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/graphics/Paint;->setTextLocale(Ljava/util/Locale;)V
 
-    .line 453
     invoke-direct {p0}, Landroid/graphics/Paint;->setAmigoTypeface()V
 
-    .line 455
     return-void
 .end method
 
@@ -299,10 +290,10 @@
 
     iput-wide v0, p0, Landroid/graphics/Paint;->mNativePaint:J
 
-    .line 478
     invoke-direct {p0, p1}, Landroid/graphics/Paint;->setClassVariablesFrom(Landroid/graphics/Paint;)V
 
-    .line 479
+    invoke-direct/range {p0 .. p0}, Landroid/graphics/Paint;->setFlymeTypeface()V
+
     return-void
 .end method
 
@@ -4625,43 +4616,34 @@
     .param p1, "typeface"    # Landroid/graphics/Typeface;
 
     .prologue
-    .line 1091
     iget-boolean v2, p0, Landroid/graphics/Paint;->mIsAmigoFont:Z
 
     if-eqz v2, :cond_0
 
-    .line 1092
     invoke-direct {p0, p1}, Landroid/graphics/Paint;->getAmigoTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
     move-result-object p1
 
-    .line 1102
     .end local p1    # "typeface":Landroid/graphics/Typeface;
     :goto_0
     return-object p1
 
-    .line 1095
     .restart local p1    # "typeface":Landroid/graphics/Typeface;
     :cond_0
     const-wide/16 v0, 0x0
 
-    .line 1096
     .local v0, "typefaceNative":J
     if-eqz p1, :cond_1
 
-    .line 1097
     iget-wide v0, p1, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 1099
     :cond_1
     iget-wide v2, p0, Landroid/graphics/Paint;->mNativePaint:J
 
     invoke-static {v2, v3, v0, v1}, Landroid/graphics/Paint;->native_setTypeface(JJ)J
 
-    .line 1100
     iput-object p1, p0, Landroid/graphics/Paint;->mTypeface:Landroid/graphics/Typeface;
 
-    .line 1101
     iput-wide v0, p0, Landroid/graphics/Paint;->mNativeTypeface:J
 
     goto :goto_0
@@ -4696,4 +4678,52 @@
 
     .line 1008
     return-object p1
+.end method
+
+.method private setFlymeTypeface()V
+    .locals 1
+
+    .prologue
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->hasFlymeTypeface()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->getflymeTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+
+    :cond_0
+    return-void
+.end method
+
+.method private setFlymeTypeface(Landroid/graphics/Typeface;)Z
+    .locals 1
+    .param p1, "typeface"    # Landroid/graphics/Typeface;
+
+    .prologue
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->hasFlymeTypeface()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Landroid/content/res/flymetheme/FlymeFontsHelper;->isDefaultTypeface(Landroid/graphics/Typeface;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

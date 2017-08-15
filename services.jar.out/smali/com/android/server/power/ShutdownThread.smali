@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/server/power/ShutdownThread$FlymeInjector;,
         Lcom/android/server/power/ShutdownThread$CloseDialogReceiver;
     }
 .end annotation
@@ -890,7 +891,7 @@
     .line 508
     sget-object v4, Lcom/android/server/power/ShutdownThread;->pd:Lamigo/app/AmigoProgressDialog;
 
-    const v6, 0x10400f5
+    const v6, #android:string@power_off#t
 
     invoke-virtual {p0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -901,7 +902,7 @@
     .line 509
     sget-object v4, Lcom/android/server/power/ShutdownThread;->pd:Lamigo/app/AmigoProgressDialog;
 
-    const v6, 0x10400f9
+    const v6, #android:string@shutdown_progress#t
 
     invoke-virtual {p0, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -2026,7 +2027,7 @@
 
     move-result-object v3
 
-    const v4, 0x10e003f
+    const v4, #android:integer@config_longPressOnPowerBehavior#t
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -2038,7 +2039,7 @@
 
     if-eqz v3, :cond_1
 
-    const v2, 0x10400fd
+    const v2, #android:string@reboot_safemode_confirm#t
 
     .line 319
     .local v2, "resourceId":I
@@ -2076,7 +2077,7 @@
 
     if-eqz v3, :cond_3
 
-    const v3, 0x10400fc
+    const v3, #android:string@reboot_safemode_title#t
 
     :goto_1
     invoke-virtual {v4, v3}, Lamigo/app/AmigoAlertDialog$Builder;->setTitle(I)Lamigo/app/AmigoAlertDialog$Builder;
@@ -2087,7 +2088,7 @@
 
     move-result-object v3
 
-    const v4, 0x1040013
+    const v4, #android:string@yes#t
 
     new-instance v5, Lcom/android/server/power/ShutdownThread$2;
 
@@ -2097,7 +2098,7 @@
 
     move-result-object v3
 
-    const v4, 0x1040009
+    const v4, #android:string@no#t
 
     new-instance v5, Lcom/android/server/power/ShutdownThread$1;
 
@@ -2177,19 +2178,19 @@
     :cond_1
     if-ne v1, v6, :cond_2
 
-    const v2, 0x10400fb
+    const v2, #android:string@shutdown_confirm_question#t
 
     goto/16 :goto_0
 
     :cond_2
-    const v2, 0x10400fa
+    const v2, #android:string@shutdown_confirm#t
 
     goto/16 :goto_0
 
     .line 323
     .restart local v2    # "resourceId":I
     :cond_3
-    const v3, 0x10400f5
+    const v3, #android:string@power_off#t
 
     goto :goto_1
 .end method
@@ -4653,3 +4654,4 @@
     .restart local v16    # "bufWriter":Ljava/io/BufferedWriter;
     goto/16 :goto_d
 .end method
+
