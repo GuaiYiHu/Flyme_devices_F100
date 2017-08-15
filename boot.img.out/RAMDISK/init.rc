@@ -702,3 +702,19 @@ service tunman /system/xbin/tunman
 	socket tunman stream 0666 system system
 	seclabel u:r:tunman:s0
 #Gionee <lingfen> <2014-06-05> add for CR01275097 end
+
+service smbd /system/bin/smbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service nmbd /system/bin/nmbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service flymed /system/bin/flymed
+    class main
+    socket flymed stream 0660 root system
