@@ -2239,6 +2239,19 @@
     .line 2386
     .restart local v2    # "handled":Z
     :goto_2
+    
+    invoke-static/range {p0 .. p1}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->flymeDispatchKeyEvent(Lcom/android/internal/policy/impl/PhoneWindow$DecorView;Landroid/view/KeyEvent;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_flyme_0
+
+    const/4 v6, 0x1
+
+    return v6
+
+    :cond_flyme_0
+    
     # getter for: Lcom/android/internal/policy/impl/PhoneWindow;->DBG_MOTION:Z
     invoke-static {}, Lcom/android/internal/policy/impl/PhoneWindow;->access$1100()Z
 
@@ -2779,6 +2792,9 @@
     .line 2782
     .end local v0    # "paint":Landroid/graphics/Paint;
     :cond_1
+
+    invoke-static/range {p0 .. p1}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->flymeDrawStatusBarBackground(Lcom/android/internal/policy/impl/PhoneWindow$DecorView;Landroid/graphics/Canvas;)V
+
     return-void
 .end method
 
