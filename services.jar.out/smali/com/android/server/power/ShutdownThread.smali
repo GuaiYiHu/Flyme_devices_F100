@@ -949,7 +949,7 @@
     .line 515
     sget-object v4, Lcom/android/server/power/ShutdownThread;->pd:Lamigo/app/AmigoProgressDialog;
 
-    invoke-virtual {v4}, Lamigo/app/AmigoProgressDialog;->show()V
+    invoke-static/range {p0 .. p0}, Lcom/android/server/power/ShutdownThread$FlymeInjector;->showShutDownAnimation(Landroid/content/Context;)V
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 

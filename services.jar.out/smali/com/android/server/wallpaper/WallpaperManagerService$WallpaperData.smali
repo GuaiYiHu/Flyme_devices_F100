@@ -124,6 +124,9 @@
 
     .line 244
     :goto_0
+        
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->initFlymeWallpaperData()V
+
     return-void
 
     .line 242
@@ -142,6 +145,7 @@
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->wallpaperFile:Ljava/io/File;
 
     goto :goto_0
+
 .end method
 
 .method static synthetic access$1200(Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;)Landroid/os/RemoteCallbackList;

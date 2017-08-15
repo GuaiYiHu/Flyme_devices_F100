@@ -23,7 +23,7 @@
     .prologue
     const/high16 v3, 0x20000
 
-    const/4 v1, 0x7
+    sget v1, Lcom/flyme/internal/R$style;->Theme_Flyme_Light_Dialog_Alert:I
 
     invoke-direct {p0, p1, v1}, Lamigo/app/AmigoAlertDialog;-><init>(Landroid/content/Context;I)V
 

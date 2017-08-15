@@ -143,6 +143,12 @@
 
 .field private audioProfileVibrate:Z
 
+.field mFlymePowerManager:Landroid/os/PowerManager;
+
+.field mFlymeWakeLock:Landroid/os/PowerManager$WakeLock;
+
+.field mFlymeWakeUpScreenRunnable:Ljava/lang/Runnable;
+
 .field private mAm:Landroid/app/IActivityManager;
 
 .field private mAmigoLedController:Lcom/android/server/notification/AmigoLedController;
@@ -10279,6 +10285,8 @@
     invoke-virtual {v0, v1, v2}, Lcom/android/server/notification/NotificationManagerService;->publishLocalService(Ljava/lang/Class;Ljava/lang/Object;)V
 
     invoke-direct/range {p0 .. p0}, Lcom/android/server/notification/NotificationManagerService;->initGnNotificationOnGoingList()V
+
+    invoke-static/range {p0 .. p0}, Lcom/android/server/notification/NotificationManagerService$FlymeInjector;->initFlymeExtraFields(Lcom/android/server/notification/NotificationManagerService;)V
 
     return-void
 
