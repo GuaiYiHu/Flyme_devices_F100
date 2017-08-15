@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<amigosetting version="1">
+<amigosetting amigoname="is_new_black_gesture_on" amigovalue="1"/>
+<amigosetting amigoname="is_psensor_browse_picture_dg" amigovalue="1"/>
+<amigosetting amigoname="is_psensor_ctrl_video_dg" amigovalue="1"/>
+<amigosetting amigoname="is_vibration_alert_on" amigovalue="1"/>
+<amigosetting amigoname="is_sdg_light_screen_on" amigovalue="1"/>
+<amigosetting amigoname="is_sdg_unlock_on" amigovalue="1"/>
+<amigosetting amigoname="is_sdg_desktop_slide_on" amigovalue="1"/>
+<amigosetting amigoname="is_fast_camera_on" amigovalue="1"/>
+<amigosetting amigoname="black_gesture_u_right" amigovalue="0:fastcamera"/>
+<amigosetting amigoname="is_vibration_effect_on" amigovalue="0"/>
+<amigosetting amigoname="custom_gesture_switch" amigovalue="0"/>
+<amigosetting amigoname="is_exsit_tranferdata" amigovalue="1"/>
+<amigosetting amigoname="is_exist_private_space" amigovalue="1"/> 
+<amigosetting amigoname="is_glove_patterns_on" amigovalue="0"/> 
+<amigosetting amigoname="blackgesture_support_doublefinger" amigovalue="0"/> 
+<amigosetting amigoname="is_exist_otg_reverse_charging" amigovalue="1" amigoprop="update"/>
+</amigosetting>

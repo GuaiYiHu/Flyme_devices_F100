@@ -1,0 +1,45 @@
+{
+"imgs": 
+        [
+        {
+            "ImageName": "1.jpg",
+            "ImageTitle": "不要再追逐光明了",
+            "ImageContent": "让自己开始发光吧！",
+            "ImageSource": "视觉中国",
+            "Background": "#5a8661",
+            "ShowTimeBegin": "00:00",
+            "ShowTimeEnd": "08:00" ,
+                        "MusicName": "",
+                        "MusicSinger": "",
+                        "MusicURL": "",
+                        "Lock": "0"
+        },
+        {
+            "ImageName": "2.jpg",
+            "ImageTitle": "把全世界甩在身后",
+            "ImageContent": "当你面对荆棘，当你面对黑暗，当你面对无路可走的前方，别慌张，只是因为你走在所有人前面。",
+            "ImageSource": "视觉中国",
+            "Background": "#903837",
+            "ShowTimeBegin": "08:00",
+            "ShowTimeEnd": "16:00",
+                        "MusicName": "流动的故事",
+                        "MusicSinger": "",
+                        "MusicURL": "",
+                        "Lock": "0"
+        },
+        {
+            "ImageName": "3.jpg",
+            "ImageTitle": "斑斓世界中的自己",
+            "ImageContent": "每一个带着面具的人，都在渴望被看穿。",
+            "ImageSource": "视觉中国",
+            "Background": "#ab404d",
+            "ShowTimeBegin": "16:00",
+            "ShowTimeEnd": "24:00",            
+                        "MusicName": "",
+                        "MusicSinger": "",
+                        "MusicURL": "",
+                        "Lock": "0"
+        }
+    ]
+}
+

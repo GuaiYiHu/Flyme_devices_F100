@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+		<profile>
+			<name>profile_supported_simap</name>
+			<value>false</value>
+		</profile>
+		<profile>
+			<name>profile_supported_prxm</name>
+			<value>false</value>
+		</profile>
+		<profile>
+			<name>profile_supported_prxr</name>
+			<value>false</value>
+		</profile>
+        <!--Gionee <Amigo_Bluetooth><fanjianhua> <2015-07-10> CR01505950 modify true to false begin-->
+		<profile>
+			<name>profile_supported_ftp</name>
+			<value>false</value>
+		</profile>
+        <!--Gionee <Amigo_Bluetooth><fanjianhua> <2015-07-10> CR01505950 modify true to false end-->
+		<profile>
+			<name>profile_supported_bpp</name>
+			<value>false</value>
+		</profile>
+		<profile>
+			<name>profile_supported_bip</name>
+			<value>false</value>
+		</profile>
+		<profile>
+			<name>profile_supported_dun</name>
+			<value>false</value>
+		</profile>
+</resources>

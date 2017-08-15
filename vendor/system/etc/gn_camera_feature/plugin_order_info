@@ -1,0 +1,62 @@
+[
+    {
+        "package": "gn.camera.plugin.prosetting",
+        "order": "1"
+    } ,
+    {
+        "package": "gn.camera.plugin.facebeauty",
+        "order": "3"
+    } ,
+    {
+        "package": "gn.camera.plugin.picfilter",
+        "order": "5"
+    }, 
+    {
+        "package": "gn.camera.plugin.singlehdr", 
+        "order": "4"
+    }, 
+    {
+        "package": "gn.camera.plugin.panorama",
+        "order": "7"
+    }, 
+    {
+        "package": "gn.camera.plugin.nightvideo", 
+        "order": "6"
+    },
+    {
+        "package": "gn.camera.plugin.picnote",
+        "order": "9"
+    },
+    {
+        "package": "gn.camera.plugin.smartburst",
+        "order": "8"
+    },
+    {
+        "package": "gn.camera.plugin.magicfocus",
+        "order": "10"
+    },
+    {
+        "package": "gn.camera.plugin.autoscene",
+        "order": "2"
+    },
+	{
+        "package": "gn.camera.plugin.gitshot",
+        "order": "11"
+    },
+	{
+        "package": "gn.camera.plugin.polaroid",
+        "order": "12"
+    },
+    {
+        "package": "gn.camera.plugin.editor",
+        "order": "13"
+    },
+	{
+        "package": "gn.camera.plugin.microspu",
+        "order": "14"
+    },
+	{
+        "package": "gn.camera.plugin.scan",
+        "order": "15"
+    }
+]

@@ -1,0 +1,284 @@
+.class public Lamigo/widget/AmigoCheckBox;
+.super Landroid/widget/CheckBox;
+.source "AmigoCheckBox.java"
+
+
+# static fields
+.field private static final STATE_CHECKED:I = 0x1
+
+.field private static final STATE_DEFAULT:I = 0x0
+
+.field private static final TAG:Ljava/lang/String; = "AmigoCheckBox"
+
+
+# instance fields
+.field private mButtonDrawable:Landroid/graphics/drawable/Drawable;
+
+.field private mState:I
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+    .param p1, "context"    # Landroid/content/Context;
+
+    .prologue
+    .line 28
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lamigo/widget/AmigoCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 29
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+
+    .prologue
+    .line 32
+    const v0, 0x101006c
+
+    invoke-direct {p0, p1, p2, v0}, Lamigo/widget/AmigoCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    .line 34
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyleAttr"    # I
+
+    .prologue
+    .line 37
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, p3, v0}, Lamigo/widget/AmigoCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    .line 38
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+    .locals 3
+    .param p1, "context"    # Landroid/content/Context;
+    .param p2, "attrs"    # Landroid/util/AttributeSet;
+    .param p3, "defStyleAttr"    # I
+    .param p4, "defStyleRes"    # I
+
+    .prologue
+    .line 42
+    invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    .line 23
+    const/4 v2, -0x1
+
+    iput v2, p0, Lamigo/widget/AmigoCheckBox;->mState:I
+
+    .line 44
+    invoke-static {}, Lamigo/changecolors/ChameleonColorManager;->isNeedChangeColor()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 45
+    sget-object v2, Lcom/android/internal/R$styleable;->CompoundButton:[I
+
+    invoke-virtual {p1, p2, v2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    .line 47
+    .local v0, "a":Landroid/content/res/TypedArray;
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lamigo/widget/AmigoCheckBox;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
+
+    .line 48
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 50
+    iget-object v2, p0, Lamigo/widget/AmigoCheckBox;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0, v2}, Lamigo/widget/AmigoCheckBox;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 52
+    invoke-virtual {p0}, Lamigo/widget/AmigoCheckBox;->getBackground()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    .line 53
+    .local v1, "drawable":Landroid/graphics/drawable/Drawable;
+    if-eqz v1, :cond_0
+
+    instance-of v2, v1, Landroid/graphics/drawable/RippleDrawable;
+
+    if-eqz v2, :cond_0
+
+    .line 54
+    check-cast v1, Landroid/graphics/drawable/RippleDrawable;
+
+    .end local v1    # "drawable":Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lamigo/changecolors/ChameleonColorManager;->getContentColorThirdlyOnBackgroud_C3()I
+
+    move-result v2
+
+    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/RippleDrawable;->setColor(Landroid/content/res/ColorStateList;)V
+
+    .line 57
+    :cond_0
+    invoke-static {p0}, Lamigo/changecolors/ChangeColorUtil;->changeTextViewTextColor(Landroid/widget/TextView;)V
+
+    .line 61
+    .end local v0    # "a":Landroid/content/res/TypedArray;
+    :cond_1
+    return-void
+.end method
+
+.method private changeButtonDrawable()V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x1
+
+    .line 76
+    invoke-virtual {p0}, Lamigo/widget/AmigoCheckBox;->getDrawableState()[I
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lamigo/widget/AmigoCheckBox;->stateIsChecked([I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 77
+    iget v0, p0, Lamigo/widget/AmigoCheckBox;->mState:I
+
+    if-eq v0, v3, :cond_0
+
+    .line 78
+    iget-object v0, p0, Lamigo/widget/AmigoCheckBox;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {}, Lamigo/changecolors/ChameleonColorManager;->getAccentColor_G1()I
+
+    move-result v1
+
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    .line 79
+    iput v3, p0, Lamigo/widget/AmigoCheckBox;->mState:I
+
+    .line 87
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 82
+    :cond_1
+    iget v0, p0, Lamigo/widget/AmigoCheckBox;->mState:I
+
+    if-eqz v0, :cond_0
+
+    .line 83
+    iget-object v0, p0, Lamigo/widget/AmigoCheckBox;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {}, Lamigo/changecolors/ChameleonColorManager;->getContentColorSecondaryOnBackgroud_C2()I
+
+    move-result v1
+
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+
+    .line 84
+    const/4 v0, 0x0
+
+    iput v0, p0, Lamigo/widget/AmigoCheckBox;->mState:I
+
+    goto :goto_0
+.end method
+
+.method private stateIsChecked([I)Z
+    .locals 3
+    .param p1, "myDrawableState"    # [I
+
+    .prologue
+    .line 90
+    const/4 v0, 0x0
+
+    .local v0, "index":I
+    :goto_0
+    array-length v1, p1
+
+    if-ge v0, v1, :cond_1
+
+    .line 91
+    aget v1, p1, v0
+
+    const v2, 0x10100a0
+
+    if-ne v1, v2, :cond_0
+
+    .line 92
+    const/4 v1, 0x1
+
+    .line 95
+    :goto_1
+    return v1
+
+    .line 90
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 95
+    :cond_1
+    const/4 v1, 0x0
+
+    goto :goto_1
+.end method
+
+
+# virtual methods
+.method protected drawableStateChanged()V
+    .locals 1
+
+    .prologue
+    .line 67
+    invoke-static {}, Lamigo/changecolors/ChameleonColorManager;->isNeedChangeColor()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lamigo/widget/AmigoCheckBox;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    .line 68
+    invoke-direct {p0}, Lamigo/widget/AmigoCheckBox;->changeButtonDrawable()V
+
+    .line 72
+    :cond_0
+    invoke-super {p0}, Landroid/widget/CheckBox;->drawableStateChanged()V
+
+    .line 73
+    return-void
+.end method
