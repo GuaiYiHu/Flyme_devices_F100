@@ -44165,6 +44165,10 @@
     const/4 v2, 0x1
 
     goto/16 :goto_4
+    :cond_flyme_0
+    invoke-static/range {p0 .. p0}, Lcom/android/server/am/ActivityManagerService$FlymeActivityManagerServiceInjector;->flymeBroadcaseRecentTasksChanged(Lcom/android/server/am/ActivityManagerService;)V
+
+    return-void
 .end method
 
 .method public amiGetCprByClass(Lcom/android/server/am/ProcessRecord;Landroid/content/ComponentName;I)Lcom/android/server/am/ContentProviderRecord;

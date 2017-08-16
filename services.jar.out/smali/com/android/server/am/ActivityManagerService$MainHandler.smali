@@ -1821,8 +1821,8 @@
     invoke-direct {v8, v4}, Lcom/android/server/am/BaseErrorDialog;-><init>(Landroid/content/Context;)V
 
     .line 1705
-    .local v8, "d":Lamigo/app/AmigoAlertDialog;
-    invoke-virtual {v8}, Lamigo/app/AmigoAlertDialog;->getWindow()Landroid/view/Window;
+    .local v8, "d":Landroid/app/AlertDialog;
+    invoke-virtual {v8}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v4
 
@@ -1833,7 +1833,7 @@
     .line 1706
     const/4 v4, 0x0
 
-    invoke-virtual {v8, v4}, Lamigo/app/AmigoAlertDialog;->setCancelable(Z)V
+    invoke-virtual {v8, v4}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
     .line 1707
     move-object/from16 v0, p0
@@ -1848,7 +1848,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v8, v4}, Lamigo/app/AmigoAlertDialog;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v8, v4}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 1708
     move-object/from16 v0, p0
@@ -1863,7 +1863,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v8, v4}, Lamigo/app/AmigoAlertDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v8, v4}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 1709
     const/4 v4, -0x1
@@ -1892,15 +1892,15 @@
 
     move-result-object v6
 
-    invoke-virtual {v8, v4, v5, v6}, Lamigo/app/AmigoAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
+    invoke-virtual {v8, v4, v5, v6}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
     .line 1711
-    invoke-virtual {v8}, Lamigo/app/AmigoAlertDialog;->show()V
+    invoke-virtual {v8}, Landroid/app/AlertDialog;->show()V
 
     goto/16 :goto_0
 
     .line 1715
-    .end local v8    # "d":Lamigo/app/AmigoAlertDialog;
+    .end local v8    # "d":Landroid/app/AlertDialog;
     :pswitch_d
     move-object/from16 v0, p0
 
@@ -1925,8 +1925,8 @@
     invoke-direct {v8, v4}, Lcom/android/server/am/BaseErrorDialog;-><init>(Landroid/content/Context;)V
 
     .line 1720
-    .restart local v8    # "d":Lamigo/app/AmigoAlertDialog;
-    invoke-virtual {v8}, Lamigo/app/AmigoAlertDialog;->getWindow()Landroid/view/Window;
+    .restart local v8    # "d":Landroid/app/AlertDialog;
+    invoke-virtual {v8}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v4
 
@@ -1937,7 +1937,7 @@
     .line 1721
     const/4 v4, 0x0
 
-    invoke-virtual {v8, v4}, Lamigo/app/AmigoAlertDialog;->setCancelable(Z)V
+    invoke-virtual {v8, v4}, Landroid/app/AlertDialog;->setCancelable(Z)V
 
     .line 1722
     move-object/from16 v0, p0
@@ -1952,7 +1952,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v8, v4}, Lamigo/app/AmigoAlertDialog;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v8, v4}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 1723
     move-object/from16 v0, p0
@@ -1967,7 +1967,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v8, v4}, Lamigo/app/AmigoAlertDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v8, v4}, Landroid/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 1724
     const/4 v4, -0x1
@@ -1996,15 +1996,15 @@
 
     move-result-object v6
 
-    invoke-virtual {v8, v4, v5, v6}, Lamigo/app/AmigoAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
+    invoke-virtual {v8, v4, v5, v6}, Landroid/app/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
     .line 1726
-    invoke-virtual {v8}, Lamigo/app/AmigoAlertDialog;->show()V
+    invoke-virtual {v8}, Landroid/app/AlertDialog;->show()V
 
     goto/16 :goto_0
 
     .line 1731
-    .end local v8    # "d":Lamigo/app/AmigoAlertDialog;
+    .end local v8    # "d":Landroid/app/AlertDialog;
     :pswitch_e
     move-object/from16 v0, p0
 

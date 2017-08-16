@@ -129,7 +129,7 @@
 
 .field private mCurrentSubtype:Landroid/view/inputmethod/InputMethodSubtype;
 
-.field private mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+.field private mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
 .field mEnabledSession:Lcom/android/server/InputMethodManagerService$SessionState;
 
@@ -252,7 +252,7 @@
 
 .field private final mSwitchingController:Lcom/android/internal/inputmethod/InputMethodSubtypeSwitchingController;
 
-.field private mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+.field private mSwitchingDialog:Landroid/app/AlertDialog;
 
 .field private mSwitchingDialogTitleView:Landroid/view/View;
 
@@ -1105,13 +1105,13 @@
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/server/InputMethodManagerService;)Lamigo/app/AmigoAlertDialog;
+.method static synthetic access$700(Lcom/android/server/InputMethodManagerService;)Landroid/app/AlertDialog;
     .locals 1
     .param p0, "x0"    # Lcom/android/server/InputMethodManagerService;
 
     .prologue
     .line 144
-    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     return-object v0
 .end method
@@ -2396,7 +2396,7 @@
     :cond_0
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v13, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     if-eqz v13, :cond_1
 
@@ -4312,19 +4312,19 @@
 
     move-result-object v28
 
-    new-instance v30, Lamigo/app/AmigoAlertDialog$Builder;
+    new-instance v30, Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v0, v30
 
-    move/from16 v1, v28
+    move-object/from16 v1, v28
 
-    invoke-direct {v0, v9, v1}, Lamigo/app/AmigoAlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     move-object/from16 v0, v30
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iput-object v0, v1, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v0, p0
 
@@ -4335,7 +4335,7 @@
     .line 2987
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v30, v0
 
@@ -4351,16 +4351,16 @@
 
     move-object/from16 v1, v32
 
-    invoke-virtual {v0, v1}, Lamigo/app/AmigoAlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Lamigo/app/AmigoAlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
     .line 2994
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v30, v0
 
-    invoke-virtual/range {v30 .. v30}, Lamigo/app/AmigoAlertDialog$Builder;->getContext()Landroid/content/Context;
+    invoke-virtual/range {v30 .. v30}, Landroid/app/AlertDialog$Builder;->getContext()Landroid/content/Context;
 
     move-result-object v12
 
@@ -4403,13 +4403,13 @@
     .line 3002
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v30, v0
 
     move-object/from16 v0, v30
 
-    invoke-virtual {v0, v13}, Lamigo/app/AmigoAlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Lamigo/app/AmigoAlertDialog$Builder;
+    invoke-virtual {v0, v13}, Landroid/app/AlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/app/AlertDialog$Builder;
 
     .line 3004
     const-string v30, "layout_inflater"
@@ -4535,11 +4535,11 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v30, v0
 
-    invoke-virtual/range {v30 .. v30}, Lamigo/app/AmigoAlertDialog$Builder;->getContext()Landroid/content/Context;
+    invoke-virtual/range {v30 .. v30}, Landroid/app/AlertDialog$Builder;->getContext()Landroid/content/Context;
 
     move-result-object v30
 
@@ -4565,7 +4565,7 @@
     .local v8, "choiceListener":Landroid/content/DialogInterface$OnClickListener;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v30, v0
 
@@ -4575,18 +4575,18 @@
 
     move/from16 v1, v32
 
-    invoke-virtual {v0, v1}, Lamigo/app/AmigoAlertDialog$Builder;->setTitle(I)Lamigo/app/AmigoAlertDialog$Builder;
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 3066
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v30, v0
 
     move-object/from16 v0, v30
 
-    invoke-virtual {v0, v6, v7, v8}, Lamigo/app/AmigoAlertDialog$Builder;->setSingleChoiceItems(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Lamigo/app/AmigoAlertDialog$Builder;
+    invoke-virtual {v0, v6, v7, v8}, Landroid/app/AlertDialog$Builder;->setSingleChoiceItems(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 3068
     if-eqz p1, :cond_a
@@ -4606,7 +4606,7 @@
     .local v25, "positiveListener":Landroid/content/DialogInterface$OnClickListener;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v30, v0
 
@@ -4618,7 +4618,7 @@
 
     move-object/from16 v2, v25
 
-    invoke-virtual {v0, v1, v2}, Lamigo/app/AmigoAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lamigo/app/AmigoAlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 3079
     new-instance v24, Lcom/android/server/InputMethodManagerService$8;
@@ -4633,7 +4633,7 @@
     .local v24, "negativeListener":Landroid/content/DialogInterface$OnClickListener;
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v30, v0
 
@@ -4645,7 +4645,7 @@
 
     move-object/from16 v2, v24
 
-    invoke-virtual {v0, v1, v2}, Lamigo/app/AmigoAlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lamigo/app/AmigoAlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 3088
     .end local v24    # "negativeListener":Landroid/content/DialogInterface$OnClickListener;
@@ -4653,11 +4653,11 @@
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     move-object/from16 v30, v0
 
-    invoke-virtual/range {v30 .. v30}, Lamigo/app/AmigoAlertDialog$Builder;->create()Lamigo/app/AmigoAlertDialog;
+    invoke-virtual/range {v30 .. v30}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
     move-result-object v30
 
@@ -4665,12 +4665,12 @@
 
     move-object/from16 v1, p0
 
-    iput-object v0, v1, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iput-object v0, v1, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     .line 3089
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     move-object/from16 v30, v0
 
@@ -4680,16 +4680,16 @@
 
     move/from16 v1, v32
 
-    invoke-virtual {v0, v1}, Lamigo/app/AmigoAlertDialog;->setCanceledOnTouchOutside(Z)V
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
     .line 3090
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     move-object/from16 v30, v0
 
-    invoke-virtual/range {v30 .. v30}, Lamigo/app/AmigoAlertDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual/range {v30 .. v30}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v30
 
@@ -4704,11 +4704,11 @@
     .line 3092
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     move-object/from16 v30, v0
 
-    invoke-virtual/range {v30 .. v30}, Lamigo/app/AmigoAlertDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual/range {v30 .. v30}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v30
 
@@ -4733,11 +4733,11 @@
     .line 3094
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     move-object/from16 v30, v0
 
-    invoke-virtual/range {v30 .. v30}, Lamigo/app/AmigoAlertDialog;->getWindow()Landroid/view/Window;
+    invoke-virtual/range {v30 .. v30}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v30
 
@@ -4759,11 +4759,11 @@
     .line 3096
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     move-object/from16 v30, v0
 
-    invoke-virtual/range {v30 .. v30}, Lamigo/app/AmigoAlertDialog;->show()V
+    invoke-virtual/range {v30 .. v30}, Landroid/app/AlertDialog;->show()V
 
     .line 3097
     monitor-exit v31
@@ -8551,24 +8551,24 @@
 
     .line 3153
     :cond_0
-    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_1
 
     .line 3154
-    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v0, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v0}, Lamigo/app/AmigoAlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
     .line 3155
-    iput-object v2, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iput-object v2, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     .line 3158
     :cond_1
     invoke-direct {p0}, Lcom/android/server/InputMethodManagerService;->updateImeWindowStatusLocked()V
 
     .line 3159
-    iput-object v2, p0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Lamigo/app/AmigoAlertDialog$Builder;
+    iput-object v2, p0, Lcom/android/server/InputMethodManagerService;->mDialogBuilder:Landroid/app/AlertDialog$Builder;
 
     .line 3160
     iput-object v2, p0, Lcom/android/server/InputMethodManagerService;->mIms:[Landroid/view/inputmethod/InputMethodInfo;
@@ -15174,7 +15174,7 @@
     iput-boolean v1, p0, Lcom/android/server/InputMethodManagerService;->mShowImeWithHardKeyboard:Z
 
     .line 1827
-    iget-object v1, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v1, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
     if-eqz v1, :cond_0
 
@@ -15182,9 +15182,9 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Lamigo/app/AmigoAlertDialog;
+    iget-object v1, p0, Lcom/android/server/InputMethodManagerService;->mSwitchingDialog:Landroid/app/AlertDialog;
 
-    invoke-virtual {v1}, Lamigo/app/AmigoAlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/AlertDialog;->isShowing()Z
 
     move-result v1
 

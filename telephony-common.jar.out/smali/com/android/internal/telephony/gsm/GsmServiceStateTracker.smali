@@ -25923,9 +25923,7 @@
 
     move-result v6
 
-    invoke-interface/range {v2 .. v7}, Lcom/mediatek/common/telephony/IServiceStateExt;->onUpdateSpnDisplayForIms(Ljava/lang/String;Landroid/telephony/ServiceState;IILjava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
+    .local v3, "plmn":Ljava/lang/String;
 
     .line 1478
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z

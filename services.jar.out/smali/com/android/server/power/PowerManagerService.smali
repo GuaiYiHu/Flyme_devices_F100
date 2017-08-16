@@ -11750,7 +11750,7 @@
 
     const-string v6, "gn_button_light"
 
-    invoke-static {v5, v6, v7}, Lamigo/provider/AmigoSettings;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v5, v6, v7}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v5
 
@@ -11770,7 +11770,7 @@
 
     const-string v6, "ssg_switch"
 
-    invoke-static {v5, v6, v7}, Lamigo/provider/AmigoSettings;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v5, v6, v7}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v5
 
@@ -11785,7 +11785,7 @@
 
     const-string v6, "ssg_smart_light_screen"
 
-    invoke-static {v5, v6, v7}, Lamigo/provider/AmigoSettings;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v5, v6, v7}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v5
 
@@ -15173,7 +15173,7 @@
     .line 835
     const-string v0, "gn_button_light"
 
-    invoke-static {v0}, Lamigo/provider/AmigoSettings;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -15193,7 +15193,7 @@
     .line 842
     const-string v0, "ssg_switch"
 
-    invoke-static {v0}, Lamigo/provider/AmigoSettings;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -15208,7 +15208,7 @@
     .line 845
     const-string v0, "ssg_smart_light_screen"
 
-    invoke-static {v0}, Lamigo/provider/AmigoSettings;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 

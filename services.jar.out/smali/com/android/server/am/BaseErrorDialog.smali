@@ -1,5 +1,5 @@
 .class Lcom/android/server/am/BaseErrorDialog;
-.super Lamigo/app/AmigoAlertDialog;
+.super Landroid/app/AlertDialog;
 .source "BaseErrorDialog.java"
 
 
@@ -25,7 +25,7 @@
 
     sget v1, Lcom/flyme/internal/R$style;->Theme_Flyme_Light_Dialog_Alert:I
 
-    invoke-direct {p0, p1, v1}, Lamigo/app/AmigoAlertDialog;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p0, p1, v1}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
     const/4 v1, 0x1
 
@@ -183,7 +183,7 @@
     return v0
 
     :cond_0
-    invoke-super {p0, p1}, Lamigo/app/AmigoAlertDialog;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-super {p0, p1}, Landroid/app/AlertDialog;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -195,7 +195,7 @@
 
     .prologue
     .line 56
-    invoke-super {p0}, Lamigo/app/AmigoAlertDialog;->onStart()V
+    invoke-super {p0}, Landroid/app/AlertDialog;->onStart()V
 
     .line 57
     iget-object v0, p0, Lcom/android/server/am/BaseErrorDialog;->mHandler:Landroid/os/Handler;
