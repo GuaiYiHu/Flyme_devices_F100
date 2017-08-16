@@ -2539,9 +2539,7 @@
 
     iget-object v4, v0, Lcom/android/internal/telephony/dataconnection/DcTracker;->mPreferredApn:Lcom/android/internal/telephony/dataconnection/ApnSetting;
 
-    invoke-interface {v3, v4}, Lcom/mediatek/common/telephony/IGsmDCTExt;->customizeApn(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
+    .local v3, "apn":Ljava/lang/Object;
 
     check-cast v3, Lcom/android/internal/telephony/dataconnection/ApnSetting;
 
@@ -2787,9 +2785,7 @@
 
     move-object/from16 v0, v28
 
-    invoke-interface {v3, v0}, Lcom/mediatek/common/telephony/IGsmDCTExt;->customizeApn(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v28
+    .local v28, "apn":Ljava/lang/Object;
 
     .end local v28    # "apn":Lcom/android/internal/telephony/dataconnection/ApnSetting;
     check-cast v28, Lcom/android/internal/telephony/dataconnection/ApnSetting;
