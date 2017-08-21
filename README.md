@@ -15,9 +15,8 @@
 ===
 还是在devices目录，使用下面的命令下载代码：
 
-    $ git clone https://github.com/GuaiYiHu/Flyme_devices_F100.git -b lollipop-5.1
-    $ mv ./Flyme_devices_F100 ./F100
-    $ . ../build/envsetup.sh && cd devices/F100 && flyme fullota -j8
+    $ git clone https://github.com/GuaiYiHu/Flyme_devices_F100.git -b lollipop-5.1 F100
+    $ source ../build/envsetup.sh && cF100 && make fullota -j8
 
 3.已知bug
 ===
