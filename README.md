@@ -1,6 +1,6 @@
 # Flyme_devices_F100
 
-金立智能手机F100 FlymeOS 基于官底amigo3.1.14适配（Android 5.1.1）。
+金立智能手机F100 Flyme5。基于官底amigoOS3.1.14适配（Android 5.1.1）。
 
 1.下载代码
 ===
@@ -9,7 +9,7 @@
     $ mkdir FlymeOS
     $ cd FlymeOS
     $ repo init -u https://github.com/FlymeOS/manifest.git -b lollipop-5.1
-    $ repo sync -c -j4
+    $ repo sync -j4
 
 2.编译刷机包
 ===
